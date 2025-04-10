@@ -1,5 +1,5 @@
 <div class="container">
-  <form class="mt-4 p-5 bg-secondary text-white rounded">
+  <form class="jumbotron">
       <h3 class="display-4">Add a Link</h3>
       <div class="form-group">
         <label for="title">Title:</label>
@@ -14,4 +14,9 @@
     </button>
   </form>
 </div>
-<app-article class='card'></app-article>
+
+<div class = "container">
+  @for (art of sortedArticles(); track art) {
+    <app-article [article]="art"></app-article>
+  }
+</div>
